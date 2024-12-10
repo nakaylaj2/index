@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BEAT TECH</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style type="text/css">
+        #albumContainer {
+            display: flex;               
+            overflow-x: auto;           
+            padding: 10px;              
+        }
+
+        .albumCover {
+            width: 150px;              
+            height: auto;               
+            margin-right: 10px;         
+            cursor: pointer;            }
+    </style>
+</head>
+<body>
+
+<h1 id="headline">TYPOGRAPHY</h1>
+<h1>
+
+<a href="https://www.youtube.com/watch?v=NGAW-DGkXuM&list=PLkqz3S84Tw-Q8JNMuD6AEcXy2ltzW-RFv&index=4" target="_blank">RUN FOR THE HILLS</a>
+</h1>
+
+<div id="letters">
+    ABCDEFGHIJKLM<br>
+    NOPQRSTUVWXYZ<br>
+    1234567890 <br>
+    !@#$%^&*()
+</div>
+
+<div id="letters2">
+    ABCDEFGHIJKLM<br>
+    NOPQRSTUVWXYZ<br>
+    1234567890 <br>
+    !@#$%^&*()
+</div>
+<div id="beattech">
+    BEAT TECH
+</div>
+
+<div id="blinkingText">AA</div>
+
+<script>
+    const textElement = document.getElementById('blinkingText');
+    const texts = ['AA', 'BB', 'CC', 'DD','EE']; 
+    let index = 0;
+
+    setInterval(() => {
+        index = (index + 2) % texts.length; 
+        textElement.textContent = texts[index]; 
+    }, 2000); 
+</script>
+
+<h2>FACTS</h2>
+
+<div id="fact1">
+    + It is typically categorized as a sans-serif typeface, emphasizing simplicity and readability while maintaining a contemporary edge.
+</div>
+<div id="fact2">
+    + Pairs well with clean and simple fonts like Helvetica or Open Sans to balance its bold, futuristic look.
+    Combining it with minimalist graphics or gradients can enhance its techy vibe.
+</div>
+<div id="fact3">
++Tate McRae's music blends pop, alternative, and indie elements, so the font might be chosen to reflect these traits. A modern, minimalist font might be used to communicate her contemporary, emotionally-driven style, while a handwritten or sketchy font could convey vulnerability or authenticity.</div>
+
+<img src="image/tourposter.jpg" alt="tourposter" class="tourposter">
+
+<div id="albumContainer">
+    <img src="image/album2.jpg" alt="Album Cover 1" class="albumCover">
+    <audio class="albumAudio" src="audio/whatwouldyoudo.mp3"></audio>
+
+    <img src="image/album3.jpg" alt="Album Cover 2" class="albumCover">
+    <audio class="albumAudio" src="audio/Tate McRae - think later.mp3"></audio>
+
+    <img src="image/album4.jpg" alt="Album Cover 3" class="albumCover">
+    <audio class="albumAudio" src="audio/itsok.mp3"></audio>
+</div>
+<iframe src="https://giphy.com/embed/gQ4NO18Hbn4SV7Pmjj" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/tatemcrae-tate-mcrae-t8-gQ4NO18Hbn4SV7Pmjj">via GIPHY</a></p>
+
+<script>
+    const albumCovers = document.querySelectorAll('.albumCover');
+    const albumAudios = document.querySelectorAll('.albumAudio');
+
+    albumCovers.forEach((cover, index) => {
+        cover.addEventListener('click', () => {
+            const audio = albumAudios[index];
+            if (audio.paused) {
+                audio.play();  
+            } else {
+                audio.pause(); 
+            }
+        });
+    });
+</script>
+</body>
+</html>

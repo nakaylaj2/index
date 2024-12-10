@@ -1,0 +1,143 @@
+.body {
+    background-color: #ffffff;
+}
+
+#container-all {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    height: 91vh;
+    bottom: 0;
+}
+
+#albumContainer {
+    display: flex;              
+    overflow-x: auto;           
+    padding:10px;              
+}
+
+@font-face {
+    font-family: 'beat_techregular';
+    src: url('fonts/beattech-reg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'beat_techline';
+    src: url('beattech-line-webfont.woff2') format('woff2'),
+         url('fonts/beattech-line-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes switchCase {
+    0% { text-transform: uppercase; }
+    50% { text-transform: lowercase; }
+    100% { text-transform: uppercase; }
+}
+
+#headline {
+    font-family: sans-serif;    
+    font-size: 40px;
+    width: 300px;
+    color: black;
+    text-align: center;
+}
+
+#letters, #letters2 {
+    display: flex; 
+    float:right;            
+    align-items: inherit;          
+    font-size: 50px;             
+    color: black;  
+    margin-left:50vh;
+    
+}
+
+#letters {
+    font-family: 'beat_techregular'; 
+}
+
+#letters2 {
+    font-family: 'beat_techline';    
+}
+#beattech {
+    font-family: 'beat_techregular'; 
+    font-size: 30px;
+    position: absolute; 
+    top: 200px;
+}
+
+#blinkingText {
+   font-family: 'beat_techregular' !important; 
+    font-size: 300px;  
+    animation: blink 1s step-start infinite, switchCase 1s infinite;
+    position: relative;
+    top: 200px; 
+    left: 60px;
+    width: 50px; 
+    text-align: center; 
+}
+
+h2 {
+    font-family: 'beat_techregular'; 
+    color: #6571ad;
+    font-size: 40px;
+    position: relative;
+    margin-top: 400px;
+}
+
+#fact1 {
+    font-family: 'Helvetica'; 
+    color: Black;
+    font-size: 40px;
+    position: relative;
+    margin-top: 10vh;
+}
+
+#fact2 {
+    font-family: 'Helvetica'; 
+    color: Black;
+    font-size: 40px;
+    position: relative;
+    margin-top: 15vh;
+}
+#fact3 {
+    font-family: 'Helvetica'; 
+    color: Black;
+    font-size: 40px;
+    position: relative;
+    margin-top: 15vh;
+}
+
+    .tourposter {
+    justify-content: center;   
+    align-items: center;         
+    height: 55vh;              
+    overflow-x: auto;           
+    padding: 8px;              
+}
+
+#albumContainer {
+    display: table-row;               
+    justify-content:center;    
+    align-items: center;         
+    height: 50vh;             
+    overflow-x: auto;          
+    padding: 8px; }
+
+
+#giphy
+{
+    position: absolute; /* Positioned relative to the nearest positioned ancestor */
+    top: 100%; /* Vertically centers the element */
+    right:50%; /* Moves the element to the far right */
+    transform: translateY(-50%);
+    width:30vh;
+    height:50vh /* Centers the element vertically based on its height */}
